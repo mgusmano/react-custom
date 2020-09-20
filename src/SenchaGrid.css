@@ -1,0 +1,47 @@
+@import "../node_modules/material-design-icons/iconfont/material-icons.css";
+
+
+
+.x-listitem {
+    font-size: 8px;
+}
+
+.x-gridcell {
+    font-size: 11px !important;
+    font-family: "Open Sans", sans-serif !important;
+    font-weight: 300 !important;
+    color: black  !important;
+
+}
+
+.x-gridcolumn > .x-header-el {
+    font-size: 11px !important;
+}
+
+.x-gridcell-body-el, .x-roweditorcell {
+    padding-top: 1px !important;
+    padding-left: 1px !important;
+    padding-bottom: 0px !important;
+    padding-right: 1px !important;
+}
+
+
+
+.x-listitem {
+    border-style: none !important;
+    border-bottom: 1px solid lightgray !important;
+    background-color: white !important;
+}
+.x-gridcolumn-title-wrap-el {
+    padding: 5px !important;
+}
+
+.x-list .x-list-body-el {
+    background-color: white !important;
+}
+
+/* .x-column-header-sort-ASC .x-column-header-text-inner {
+    background: url(./sprite.svg#up_arrow_icon) no-repeat !important;
+    background-size: 12px 12px !important;
+    background-position: right center !important;
+} */

@@ -1,0 +1,11 @@
+.center {
+  background: rgb(180,190,190)
+}
+
+.toolbarbutton {
+  width:100px;
+  font-size:11px;
+  background:rgb(5,55,75);
+  color:white;
+  height: 100%;
+}

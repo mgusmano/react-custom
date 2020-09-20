@@ -1,0 +1,30 @@
+.ticker-body-loss {
+  color: #cf4c35
+}
+
+.ticker-body-gain {
+  color: #73b51e
+}
+
+.xticker .x-gridcell {
+  font-size: 18px !important;
+  font-family: "Open Sans", sans-serif !important;
+  font-weight: 300 !important;
+  color: black  !important;
+
+}
+
+.xticker .x-gridcolumn > .x-header-el {
+  font-size: 18px !important;
+}
+
+.xticker .x-gridcell-body-el, .x-roweditorcell {
+  padding-top: 10px !important;
+  padding-left: 10px !important;
+  padding-bottom: 10px !important;
+  padding-right: 10px !important;
+}
+
+.xticker .x-gridcolumn-title-wrap-el {
+  padding: 10px !important;
+}
