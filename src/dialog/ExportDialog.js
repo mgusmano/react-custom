@@ -42,7 +42,18 @@ const ExportDialog = (props) => {
 
 
   const handleExport = (e) => {
-    const originalData = widgets
+
+    const originalData = {
+      appTitle: 'test title',
+      dashboardData : {
+        dashboard: {
+          widgets: widgets
+        }
+      }
+    }
+
+
+    //const originalData = widgets
     // const originalData = {
     //   members: [{
     //       name: "cliff",

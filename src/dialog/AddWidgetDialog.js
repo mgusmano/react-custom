@@ -18,6 +18,7 @@ for (const [key, value] of Object.entries(Widgets)) {
   var height = parseInt(WidgetUtil.getVar('height', key, 400, functionToText))
   widgetArray.push({properties: {position: {x:  x, y:  y}, size:{width: width, height:height}}, defaultTitle: title, type: key, icon: icon})
 }
+//console.log(widgetArray)
 
 const AddWidgetDialog = (props) => {
   const { onClose, open } = props;
@@ -25,6 +26,29 @@ const AddWidgetDialog = (props) => {
   const handleClose = () => {
     onClose();
   };
+
+
+  const addDatashapes = (event, title, type, width, height) => {
+    var selectedArray = [
+      {properties: {position: {x:  10, y:  10}, size:{width:  400, height: 400}}, defaultTitle: 'Radar', type: 'Radar'},
+      {properties: {position: {x: 430, y:  10}, size:{width:  400, height: 400}}, defaultTitle: 'Pipe Analysis', type: 'Datashape'},
+      {properties: {position: {x: 850, y:  10}, size:{width:  400, height: 400}}, defaultTitle: 'Sphere Analysis', type: 'Datashape2'},
+
+      {properties: {position: {x:  10, y: 430}, size:{width:  400, height: 300}}, defaultTitle: 'Drones', type: 'Drones'},
+      {properties: {position: {x: 430, y: 430}, size:{width:  400, height: 300}}, defaultTitle: 'Flight', type: 'Flight'},
+      {properties: {position: {x: 850, y: 430}, size:{width:  400, height: 300}}, defaultTitle: 'Laser', type: 'Laser'},
+
+      {properties: {position: {x:  10, y: 750}, size:{width: 1240, height: 500}}, defaultTitle: 'Rediness', type: 'Rediness'},
+
+      //{id: 10, properties: {position: {x:  0, y:  0}, size:{width: 900, height:600}}, defaultTitle: 'Ticker', type: 'Ticker'},
+      //{id: 11, properties: {position: {x: 10, y: 10}, size:{width: 600, height:600}}, defaultTitle: 'Population', type: 'Population'}
+      //{x: 10, y: 10, w: 800, h:600, title: 'Big Data', type: 'BigData'},
+      //{x: 20, y: 20, w: 800, h:600, title: 'Population', type: 'Population'},
+    ]
+    onClose(selectedArray)
+  }
+
+
 
   const addGRUI = (event, title, type, width, height) => {
     var selectedArray = [
@@ -49,6 +73,7 @@ const AddWidgetDialog = (props) => {
 
 
   const handleClick = (widgets) => {
+    console.log(widgets)
     if (widgets == undefined) {
       onClose(null)
     }
@@ -66,7 +91,7 @@ const AddWidgetDialog = (props) => {
       </Draggable>
     );
   }
-
+//{console.log(widget)}
   return (
     <Dialog style={{zIndex:'3000'}}
       open={open}
@@ -90,6 +115,7 @@ const AddWidgetDialog = (props) => {
           </div>
         </DialogContent>
         <DialogActions>
+        <Button onClick={addDatashapes}>Add Datashapes</Button>
           <Button onClick={addGRUI}>Add GRUI</Button>
           <Button onClick={addEvents}>Add Events</Button>
           <Button onClick={(event) => handleClick()}>Close</Button>

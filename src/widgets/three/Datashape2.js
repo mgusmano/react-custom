@@ -216,7 +216,7 @@ const Datashape2 = () => {
   var render = function() {
     //init()
     console.log('render')
-    //requestAnimationFrame(render);
+    requestAnimationFrame(render);
 
 
     controls.update();

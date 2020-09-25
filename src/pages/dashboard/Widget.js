@@ -185,7 +185,7 @@ const Widget = (props) => {
         {Specific}
       </div>
       <div style={{display:'flex',flexDirection:'rows',justifyContent:'space-between',borderBottom:'0px solid lightgray',padding:'5px 0 0 0',height:'20px'}}>
-        <div style={{fontSize: '11px',fontWeight:'bold',paddingTop:'3px'}}>footer left</div>
+        <div style={{fontSize: '11px',fontWeight:'bold',paddingTop:'3px'}}>.</div>
         <div style={{fontSize: '11px',fontWeight:'bold',paddingTop:'3px'}}>({widgetRecord.id})</div>
       </div>
       <SouthEastSizer widgetRecord={widgetRecord}/>

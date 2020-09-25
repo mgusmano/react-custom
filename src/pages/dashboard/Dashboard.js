@@ -21,6 +21,7 @@ import ImportFile from './ImportFile'
 
 const Dashboard = (props) => {
   const [widgets, setWidgets] = React.useState([])
+  const [dashboardTitle, setDashboardTitle] = React.useState('')
 
   const [addWidgetOpen, setAddWidgetOpen] = React.useState(false);
   const [importOpen, setImportOpen] = React.useState(false);
@@ -34,6 +35,15 @@ const Dashboard = (props) => {
     console.log('useEffect for dashboard ')
     setTimeout(function(){
       setWidgets(window.dashboardData.dashboard.widgets)
+      console.log(window.dashboardData.apptitle)
+      //setDashboardTitle(window.dashboardData.appTitle)
+      setDashboardTitle('DataShapes Dashboard - In-Field, Live-Action Drone Defense')
+
+
+
+      // requestAnimationFrame(function() {
+      //   console.log(widgets)
+      // })
 
       var element = document.getElementById("initialLoadMask");
       if (element !== null) {
@@ -55,6 +65,45 @@ const Dashboard = (props) => {
         console.log('resize')
         console.log(e.box)
         //change box and then do a setWidget
+
+        var position = {
+          x: parseInt(e.box.left.slice(0, e.box.left.length - 2)),
+          y: parseInt(e.box.top.slice(0, e.box.top.length - 2)),
+        }
+
+        var size = {
+          width: parseInt(e.box.width.slice(0, e.box.width.length - 2)),
+          height: parseInt(e.box.height.slice(0, e.box.left.length - 2)),
+        }
+
+
+        const newWidgetsResize = [...widgets]
+        var index = newWidgetsResize.map(item => item.id).indexOf(e.id);
+        console.log(index)
+        if (index !== -1) {
+
+          console.log(newWidgetsResize[index].properties.position)
+          console.log(newWidgetsResize[index].properties.size)
+
+
+          newWidgetsResize[index].properties.position = position
+          newWidgetsResize[index].properties.size = size
+
+          console.log(newWidgetsResize[index].properties.position)
+          console.log(newWidgetsResize[index].properties.size)
+          //var n = newWidgetsResize[index];
+          //console.log(n)
+          //console.log(position)
+          //console.log(size)
+
+          // newWidgets.splice(index, 1);
+          console.log(newWidgetsResize)
+          setWidgets(newWidgetsResize)
+        }
+
+
+
+
         break;
 
       case 'delete':
@@ -79,16 +128,20 @@ const Dashboard = (props) => {
   };
 
   const handleAddWidgetClose = (values) => {
+    console.log(values)
     setAddWidgetOpen(false);
     if (values == null) {return}
+    console.log(widgets)
     var maxId = Math.max.apply(Math, widgets.map(function(o) { return o.id; }))
-    if (maxId = -Infinity) {
+    console.log(maxId)
+    if (maxId == -Infinity) {
       maxId = 0
     }
     console.log(maxId)
     values.forEach(value => {
       value.id = ++maxId
     })
+    console.log(values)
     setWidgets(widgets.concat(values))
   };
 
@@ -100,9 +153,21 @@ const Dashboard = (props) => {
 
 
     var j = JSON.parse(values)
-    console.log(j)
+    //console.log(j)
 
-    setWidgets(j)
+    setWidgets([])
+    setDashboardTitle('')
+
+
+    requestAnimationFrame(function() {
+      console.log(j.dashboardData.appTitle)
+      setDashboardTitle(j.dashboardData.appTitle)
+      setWidgets(j.dashboardData.dashboard.widgets)
+    })
+    // setTimeout(function(){
+    //   setWidgets(j)
+    // }, 0);
+
 
 
   };
@@ -143,7 +208,7 @@ const Dashboard = (props) => {
 
     <div style={{background:'#e6e6e6',height:'40px',display:'flex',flexDirection:'rows',justifyContent:'space-between'}}>
       {/* <div style={{padding:'10px 0 0 10px'}}>{dashboardData.appTitle}</div> */}
-      <div style={{padding:'10px 0 0 10px'}}>Dashboard</div>
+      <div style={{padding:'10px 0 0 10px'}}>{dashboardTitle}</div>
       <div style={{padding:'5px 0 5px 0',display:'flex',flexDirection:'row'}}>
         <Button onClick={handleAddWidgetOpen} style={{width:'100px',fontSize:'11px',background:'rgb(5,55,75)',color:'white'}} >Add Widget</Button>
         <AddWidgetDialog open={addWidgetOpen} onClose={handleAddWidgetClose} />

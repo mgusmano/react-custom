@@ -14,9 +14,10 @@ const Logo = () => {
   // const classes = useStyles();
 
   return (
-    <div style={{height: '125px', display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center'}}>
+    <div style={{background: 'white',height: '125px', display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center'}}>
       {/* <img alt="logo" src={require('./acme.jpg')} height="100px"/> */}
-      <img alt="logo" src='./fonts/acme.png' height="100px"/>
+      <img alt="logo" src='./fonts/DataShapes.png' width="175px"/>
+      {/* <img alt="logo" src='./fonts/acme.png' height="100px"/> */}
       {/* <div style={{fontSize:'32px', color:'rgb(25,150,230)'}}>Rokio.ai</div> */}
     </div>
   )

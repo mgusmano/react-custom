@@ -19,6 +19,7 @@ const Population = (props) => {
       .then((response) => {
         //var head = response.data[0]
         response.data.shift();
+        
         var store = Ext.create('Ext.data.ArrayStore', {
           fields: [
             'STNAME',

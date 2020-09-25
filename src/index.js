@@ -6,7 +6,7 @@ import { DndProvider } from 'react-dnd'
 import { HTML5Backend } from 'react-dnd-html5-backend'
 import { ModalProvider } from "react-modal-hook"
 import { TransitionGroup } from "react-transition-group"
-//import './SenchaGrid.css'
+import './SenchaGrid.css'
 import App from './App'
 // import './widgets/grui/ticker/CompaniesData'
 // import './widgets/grui/ticker/CompaniesModel'

@@ -14,7 +14,7 @@ const Menu = () => {
   return (
     <Vertical className="menu" style={{xminWidth: '80px', width:'200px'}}>
       <Logo/>
-      <div style={{textAlign:'center',fontSize:'11px'}}>Welcome {userName}</div>
+      <div style={{background:'white',color:'black',textAlign:'center',fontSize:'11px',paddingBottom:'20px'}}>Welcome {userName}</div>
       <Splitter/>
       <Nav/>
       <Splitter/>
