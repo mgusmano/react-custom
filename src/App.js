@@ -21,7 +21,10 @@ import Menu from './main/Menu'
 //import Center from './main/Center'
 
 import About from './pages/about/About'
+import Floorplan from './pages/floorplan/Floorplan'
 import Dashboard from './pages/dashboard/Dashboard'
+import CardReport from './pages/skillnet/cardreport/CardReport'
+import CardMap from './pages/skillnet/cardreport/CardMap'
 
 const App = () => {
   //const [{}, dispatch] = useGlobalState();
@@ -98,6 +101,9 @@ const App = () => {
           <Switch>
             <Route path="/" component={() => <Dashboard/>} exact />
             <Route path="/about" component={() => {return <About/>}} />
+            <Route path="/floorplan" component={() => {return <Floorplan/>}} />
+            <Route path="/cardreport" component={() => {return <CardReport/>}} />
+            <Route path="/cardmap" component={() => {return <CardMap/>}} />
             {/* <Route path="/shop" component={Shop} />
             <Route path="/dashboard" render={props => (<Dashboard exact />)}/>
             <Route path="/gridlayout" render={props => (<GridLayoutPage exact />)}/>

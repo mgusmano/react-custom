@@ -37,7 +37,8 @@ const Dashboard = (props) => {
       setWidgets(window.dashboardData.dashboard.widgets)
       console.log(window.dashboardData.apptitle)
       //setDashboardTitle(window.dashboardData.appTitle)
-      setDashboardTitle('DataShapes Dashboard - In-Field, Live-Action Drone Defense')
+      //setDashboardTitle('DataShapes Dashboard - In-Field, Live-Action Drone Defense')
+      setDashboardTitle('SkillNet Dashboard')
 
 
 
@@ -123,6 +124,10 @@ const Dashboard = (props) => {
     }
   };
 
+
+
+
+  
   const handleAddWidgetOpen = () => {
     setAddWidgetOpen(true);
   };

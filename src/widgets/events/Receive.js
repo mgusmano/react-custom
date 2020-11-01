@@ -30,6 +30,8 @@ const Receive = (props) => {
 
   useEffect(() => {
     console.log('useEffect in Receive')
+
+
     window.addEventListener('mjg', onMessage);
     return function cleanup() {
       window.removeEventListener('mjg', onMessage);

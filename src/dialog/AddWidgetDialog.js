@@ -27,6 +27,15 @@ const AddWidgetDialog = (props) => {
     onClose();
   };
 
+  const addSkillNet = (event, title, type, width, height) => {
+    var selectedArray = [
+      {properties: {position: {x:  10, y:  10}, size:{width:  1300, height: 700}}, defaultTitle: 'All Users', type: 'User2'},
+      {properties: {position: {x:  100, y:  100}, size:{width:  1000, height: 300}}, defaultTitle: 'Line Report', type: 'Line'},
+      {properties: {position: {x:  150, y:  150}, size:{width:  1000, height: 700}}, defaultTitle: 'Card Report', type: 'CardWidget'},
+    ]
+    onClose(selectedArray)
+  }
+
 
   const addDatashapes = (event, title, type, width, height) => {
     var selectedArray = [
@@ -115,7 +124,8 @@ const AddWidgetDialog = (props) => {
           </div>
         </DialogContent>
         <DialogActions>
-        <Button onClick={addDatashapes}>Add Datashapes</Button>
+        <Button onClick={addSkillNet}>Add SkillNet</Button>
+          <Button onClick={addDatashapes}>Add Datashapes</Button>
           <Button onClick={addGRUI}>Add GRUI</Button>
           <Button onClick={addEvents}>Add Events</Button>
           <Button onClick={(event) => handleClick()}>Close</Button>

@@ -87,7 +87,7 @@ const Nav = (props) => {
         </ListItem> */}
 
 
-        <ListItem
+        {/* <ListItem
           button
           selected={selectedIndex === 4}
           onClick={(event) => handleRouteClick('about', 4)}
@@ -103,6 +103,63 @@ const Nav = (props) => {
         >
           <ListItemIcon><DraftsIcon/></ListItemIcon>
           <ListItemText primary="Dashboard" ></ListItemText>
+        </ListItem> */}
+
+        <ListItem button selected={selectedIndex === 5} onClick={(event) => handleRouteClick('floorplan', 5)}>
+          <ListItemIcon><DraftsIcon/></ListItemIcon>
+          <ListItemText primary="Floorplan" ></ListItemText>
+        </ListItem>
+
+        <ListItem button selected={selectedIndex === 5} onClick={(event) => handleRouteClick('cardreport', 5)}>
+          <ListItemIcon><DraftsIcon/></ListItemIcon>
+          <ListItemText primary="Card Report" ></ListItemText>
+        </ListItem>
+
+        <ListItem button selected={selectedIndex === 5} onClick={(event) => handleRouteClick('cardmap', 5)}>
+          <ListItemIcon><DraftsIcon/></ListItemIcon>
+          <ListItemText primary="Card Report" ></ListItemText>
+        </ListItem>
+
+
+        <ListItem button selected={selectedIndex === 5} onClick={(event) => handleRouteClick('', 5)}>
+          <ListItemIcon><DraftsIcon/></ListItemIcon>
+          <ListItemText primary="Skills" ></ListItemText>
+        </ListItem>
+        <ListItem button selected={selectedIndex === 4} onClick={(event) => handleRouteClick('about', 4)}>
+          <ListItemIcon><DraftsIcon/></ListItemIcon>
+          <ListItemText primary="Goals" ></ListItemText>
+        </ListItem>
+        <ListItem button selected={selectedIndex === 4} onClick={(event) => handleRouteClick('about', 4)}>
+          <ListItemIcon><DraftsIcon/></ListItemIcon>
+          <ListItemText primary="PDP" ></ListItemText>
+        </ListItem>
+        <ListItem button selected={selectedIndex === 4} onClick={(event) => handleRouteClick('about', 4)}>
+          <ListItemIcon><DraftsIcon/></ListItemIcon>
+          <ListItemText primary="Tasks" ></ListItemText>
+        </ListItem>
+        <ListItem button selected={selectedIndex === 4} onClick={(event) => handleRouteClick('about', 4)}>
+          <ListItemIcon><DraftsIcon/></ListItemIcon>
+          <ListItemText primary="Certs" ></ListItemText>
+        </ListItem>
+        <ListItem button selected={selectedIndex === 4} onClick={(event) => handleRouteClick('about', 4)}>
+          <ListItemIcon><DraftsIcon/></ListItemIcon>
+          <ListItemText primary="Library" ></ListItemText>
+        </ListItem>
+        <ListItem button selected={selectedIndex === 4} onClick={(event) => handleRouteClick('about', 4)}>
+          <ListItemIcon><DraftsIcon/></ListItemIcon>
+          <ListItemText primary="Team" ></ListItemText>
+        </ListItem>
+        <ListItem button selected={selectedIndex === 4} onClick={(event) => handleRouteClick('about', 4)}>
+          <ListItemIcon><DraftsIcon/></ListItemIcon>
+          <ListItemText primary="Safe Return" ></ListItemText>
+        </ListItem>
+        <ListItem button selected={selectedIndex === 4} onClick={(event) => handleRouteClick('about', 4)}>
+          <ListItemIcon><DraftsIcon/></ListItemIcon>
+          <ListItemText primary="Survey" ></ListItemText>
+        </ListItem>
+        <ListItem button selected={selectedIndex === 4} onClick={(event) => handleRouteClick('about', 4)}>
+          <ListItemIcon><DraftsIcon/></ListItemIcon>
+          <ListItemText primary="Site Map" ></ListItemText>
         </ListItem>
 
         {/* <ListItem

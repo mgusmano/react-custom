@@ -37,6 +37,7 @@ export {default as ReceiveForm} from './events/ReceiveForm'
 
 export {default as User} from './skillnet/User'
 export {default as User2} from './skillnet/User2'
+export {default as CardWidget} from './skillnet/CardWidget'
 
 export {default as ReactWindow} from './reactwindow/ReactWindowExample'
 
